@@ -1,31 +1,1068 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Lebron</title>
-    </head>
+<html lang="en">
+<head>
+
+
+<title>LeBron James | The greatest of the all </title>
+
+<style>
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+  }
+  
+  body{
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+    background:#111827;
+    color:white;
+  }
+  
+  nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(0,0,0,0.9);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    backdrop-filter:blur(8px);
+  }
+  
+  .logo{
+    font-size:1.6rem;
+    font-weight:bold;
+    color:#facc15;
+  }
+  
+  .nav-links{
+    display:flex;
+    gap:25px;
+  }
+  
+  .nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+  }
+  
+  .nav-links a:hover{
+    color:#facc15;
+    transform:translateY(-2px);
+  }
+  
+  .page{
+    min-height:100vh;
+    display:none;
+    padding:120px 10%;
+    animation:fade 0.5s ease;
+  }
+  
+  .active{
+    display:block;
+  }
+  
+  @keyframes fade{
+    from{
+      opacity:0;
+      transform:translateY(20px);
+    }
+  
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+  
+  .home{
+    background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+    url('https://media.cnn.com/api/v1/images/stellar/prod/230208002315-01b-lebron-james-gallery-restricted.jpg?q=w_3000,c_fill');
+  
+    background-size:cover;
+    background-position:center;
+  }
+  
+  .hero{
+    text-align:center;
+    padding-top:80px;
+  }
+  
+  .hero h1{
+    font-size:5rem;
+    color:#facc15;
+    margin-bottom:20px;
+  }
+  
+  .hero p{
+    font-size:1.3rem;
+    max-width:1000px;
+    margin:auto;
+    color:#e5e7eb;
+    line-height:1.9;
+  }
+  
+  .hero button{
+    margin-top:35px;
+    padding:15px 35px;
+    border:none;
+    background:#facc15;
+    color:black;
+    font-weight:bold;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:0.3s;
+  }
+  
+  .hero button:hover{
+    transform:translateY(-3px);
+    background:white;
+  }
+  
+  .hero-stats{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+  }
+  
+  .hero-stat{
+    background:rgba(255,255,255,0.08);
+    padding:35px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+  }
+  
+  .hero-stat:hover{
+    transform:translateY(-8px) scale(1.03);
+  }
+  
+  .hero-stat h2{
+    font-size:3rem;
+    color:#facc15;
+    margin-bottom:10px;
+  }
+  
+  .hero-stat p{
+    color:white;
+  }
+  
+  .timeline{
+    margin-top:100px;
+    position:relative;
+  }
+  
+  .timeline::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    width:6px;
+    background:#facc15;
+    top:0;
+    bottom:0;
+  }
+  
+  .timeline-item{
+    position:relative;
+    width:50%;
+    padding:30px 50px;
+  }
+  
+  .timeline-item:nth-child(odd){
+    left:0;
+  }
+  
+  .timeline-item:nth-child(even){
+    left:50%;
+  }
+  
+  .timeline-dot{
+    position:absolute;
+    width:25px;
+    height:25px;
+    background:#facc15;
+    border-radius:50%;
+    top:40px;
+    right:-12px;
+    border:4px solid white;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-dot{
+    left:-12px;
+  }
+  
+  .timeline-card{
+    background:rgba(17,24,39,0.95);
+    padding:30px;
+    border-radius:15px;
+    transition:0.3s;
+  }
+  
+  .timeline-card:hover{
+    transform:translateY(-5px);
+  }
+  
+  .timeline-card h2{
+    color:#facc15;
+    margin-bottom:15px;
+  }
+  
+  .timeline-card p{
+    color:#d1d5db;
+    margin-bottom:20px;
+    line-height:1.8;
+  }
+  
+  .timeline-card button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#facc15;
+    font-weight:bold;
+    cursor:pointer;
+  }
+  
+  .page-title{
+    font-size:4rem;
+    margin-bottom:20px;
+  }
+  
+  .page-subtitle{
+    font-size:1.2rem;
+    max-width:1000px;
+    margin-bottom:60px;
+    line-height:1.8;
+  }
+  
+  .content-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+  }
+  
+  .card{
+    padding:30px;
+    border-radius:18px;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+  }
+  
+  .card:hover{
+    transform:translateY(-6px);
+  }
+  
+  .card h3{
+    margin-bottom:18px;
+    font-size:1.7rem;
+  }
+  
+  .card p,
+  .card li{
+    line-height:1.8;
+  }
+  
+  .card ul{
+    margin-left:20px;
+    margin-top:15px;
+  }
+  
+  .highschool-theme{
+    background:linear-gradient(135deg,#25eb74,#ffea00);
+    color:black;
+  }
+  
+  .highschool-theme .card{
+    background:rgba(255,255,255,0.35);
+  }
+  
+  .cavs-theme{
+    background:linear-gradient(135deg,#6f1d1b,#bb9457);
+  }
+  
+  .cavs-theme .card{
+    background:rgba(0,0,0,0.25);
+    border-left:6px solid gold;
+  }
+  
+  .heat-theme{
+    background:linear-gradient(135deg,#7f1d1d,#dc2626);
+  }
+  
+  .heat-theme .card{
+    background:rgba(255,255,255,0.08);
+    border-bottom:5px solid orange;
+  }
+  
+  .lakers-theme{
+    background:linear-gradient(135deg,#312e81,#facc15);
+  }
+  
+  .lakers-theme .card{
+    background:rgba(0,0,0,0.25);
+  }
+  
+  .early-theme{
+    background:linear-gradient(135deg,#7f1d1d,#dc2626);
+  }
+  
+  .stats{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+  }
+  
+  .stat-box{
+    background:rgba(255,255,255,0.12);
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+  }
+  
+  .stat-box h2{
+    font-size:2.5rem;
+    color:#facc15;
+  }
+  
+  .section-divider{
+    margin:90px 0;
+    height:4px;
+    background:linear-gradient(to right,transparent,#facc15,transparent);
+  }
+  
+  .info-banner{
+    margin-top:60px;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+  }
+  
+  .info-banner h2{
+    color:#facc15;
+    margin-bottom:20px;
+    font-size:2.2rem;
+  }
+  
+  .info-banner p{
+    line-height:1.9;
+  }
+  
+  .quote-box{
+    margin-top:40px;
+    padding:35px;
+    border-left:6px solid #facc15;
+    background:rgba(0,0,0,0.25);
+    border-radius:15px;
+  }
+  
+  .quote-box h3{
+    margin-bottom:15px;
+    color:#facc15;
+  }
+  
+  .quote-box p{
+    font-style:italic;
+    line-height:1.8;
+  }
+  
+  .award-grid{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+  }
+  
+  .award-card{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+  }
+  
+  .award-card:hover{
+    transform:translateY(-6px);
+  }
+  
+  .award-card h2{
+    font-size:2.5rem;
+    color:#facc15;
+    margin-bottom:10px;
+  }
+  
+  .image-showcase{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+  }
+  
+  .image-showcase img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.4s;
+  }
+  
+  .image-showcase img:hover{
+    transform:scale(1.04);
+  }
+  
+  .progress-section{
+    margin-top:80px;
+  }
+  
+  .progress-bar{
+    margin-bottom:30px;
+  }
+  
+  .progress-bar h4{
+    margin-bottom:10px;
+  }
+  
+  .bar{
+    width:100%;
+    height:18px;
+    background:rgba(255,255,255,0.15);
+    border-radius:50px;
+    overflow:hidden;
+  }
+  
+  .fill{
+    height:100%;
+    background:#facc15;
+  }
+  
+  .back-btn{
+    margin-top:60px;
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+  }
+  
+  .back-btn:hover{
+    transform:scale(1.05);
+  }
+  
+  footer{
+    background:black;
+    text-align:center;
+    padding:30px;
+    color:#9ca3af;
+  }
+  
+  @media(max-width:900px){
+  
+    .hero h1{
+      font-size:3rem;
+    }
+  
+    .timeline::before{
+      left:20px;
+    }
+  
+    .timeline-item{
+      width:100%;
+      left:0 !important;
+      padding-left:70px;
+      padding-right:20px;
+    }
+  
+    .timeline-dot{
+      left:8px !important;
+    }
+  
+    .nav-links{
+      display:none;
+    }
+  
+  }
+  
+  </style>
+</head>
+
+<body>
+
+
+<nav>
+
+  <div class="logo">LeBron James</div>
+
+  <div class="nav-links">
+    <a href="#" onclick="showPage('homePage')">Home</a>
+    <a href="#" onclick="showPage('earlyPage')">Early Life</a>
+    <a href="#" onclick="showPage('highschoolPage')">High School</a>
+    <a href="#" onclick="showPage('cavsPage')">Cavaliers</a>
+    <a href="#" onclick="showPage('heatPage')">Heat</a>
+    <a href="#" onclick="showPage('lakersPage')">Lakers</a>
     
-    <body align="center">
-    <body style="background-color: gold;">
-        <h1>King Lebron</h1>
-        <strong>
-        <p>These are some of lebrons achievements</p>
-    </strong>
-    </body>
-    <ol style="color: blue;"> <strong>
-        <li>4× NBA champion: 2012, 2013, 2016, 2020.</li>
-        <li>4× NBA Finals Most Valuable Player: 2012, 2013, 2016, 2020.</li>
-        <li>4× NBA Most Valuable Player: 2009, 2010, 2012, 2013.</li>
-    </strong>
-    </ol>
-<br>
-    <ul style="color: red;font-size: large;"> <strong>
-        <li>4× Olympic medalist:3× Gold: 2008, 2012, 2024Bronze: 2004</li>
-        <li>20× NBA All-Star: 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024</li>
-        <li>6× NBA All-Defensive selection:5× First Team: 2009, 2010, 2011, 2012, 2013 Second Team: 2014</li> </strong>
-    </ul>
-    <a href = "https://en.wikipedia.org/wiki/List_of_career_achievements_by_LeBron_James" target="blank">Lebron James</a>
-</p>
-<img src="bron bron.jpg">
+  </div>
+</nav>
 
 
+<section id="homePage" class="page home active">
+
+  <div class="hero">
+
+    <h1>LeBron James</h1>
+
+    <p>
+      This is a webpage about Lebron the GOAT and everything he has achieved throuhout his life.  Lebron is a global icon that has impact not only in basketball but in regular daily life. He is the GOAT and its  not even an arguement lebron has been destined for greatness since highschool 
+    </p>
+
+    <button onclick="scrollToTimeline()">Explore Timeline</button>
+
+  </div>
+
+  <div class="timeline" id="timeline">
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-card">
+        <h2>St. Vincent–St. Mary</h2>
+
+        <p>
+          LeBron became America’s most famous high school athlete
+          before entering the NBA.
+        </p>
+
+        <button onclick="showPage('highschoolPage')">
+          Open Page
+        </button>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-card">
+        <h2>Cleveland Cavaliers</h2>
+
+        <p>
+          The hometown hero transformed Cleveland into contenders.
+        </p>
+
+        <button onclick="showPage('cavsPage')">
+          Open Page
+        </button>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-card">
+        <h2>Miami Heat</h2>
+
+        <p>
+          LeBron won his first championships and dominated the NBA.
+        </p>
+
+        <button onclick="showPage('heatPage')">
+          Open Page
+        </button>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-card">
+        <h2>Los Angeles Lakers</h2>
+
+        <p>
+          Continuing his legendary career while breaking records.
+        </p>
+
+        <button onclick="showPage('lakersPage')">
+          Open Page
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="earlyPage" class="page early-theme">
+
+  <h1 class="page-title">Early Life (Before Basketball)</h1>
+
+  <p class="page-subtitle">
+    LeBron James grew up in Akron, Ohio in a tough environment.
+    Before basketball, his life was unstable, but those struggles helped shape
+    the mindset that made him a legend.
+  </p>
+
+  <div class="content-grid">
+
+    <div class="card">
+      <h3>Childhood Struggles</h3>
+
+      <p>
+        LeBron was raised by his mother, Gloria James, in Akron.
+        They moved a lot and faced financial problems, which made stability hard.
+        These early struggles built his toughness and maturity at a young age.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Family Life</h3>
+
+      <p>
+        His father was not consistently present, so his mother became
+        his main support system.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Before Basketball</h3>
+
+      <p>
+        LeBron first played football as a kid. He was fast, strong, and
+        athletic even before basketball became his main sport.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="info-banner">
+
+    <h2>Turning Point</h2>
+
+    <p>
+      A youth football coach noticed LeBron’s athletic ability and suggested
+      he focus more on basketball.
+    </p>
+
+  </div>
+
+  <div class="award-grid">
+
+    <div class="award-card">
+      <h2>1984</h2>
+      <p>Born in Akron, Ohio</p>
+    </div>
+
+    <div class="award-card">
+      <h2>Kid</h2>
+      <p>Played Football First</p>
+    </div>
+
+    <div class="award-card">
+      <h2>Move</h2>
+      <p>Constant Relocation</p>
+    </div>
+
+    <div class="award-card">
+      <h2>Focus</h2>
+      <p>Basketball Changed Life</p>
+    </div>
+
+  </div>
+
+  <div class="quote-box">
+
+    <h3>Early Life Lesson</h3>
+
+    <p>
+      “Struggle builds character.”
+    </p>
+
+  </div>
+
+  <button class="back-btn" onclick="showPage('homePage')">
+    ← Back Home
+  </button>
+
+</section>
+
+
+<section id="highschoolPage"
+class="page highschool-theme">
+
+  <h1 class="page-title">
+    St. Vincent–St. Mary
+  </h1>
+
+  <p class="page-subtitle">
+    Before becoming an NBA superstar, LeBron James dominated
+    high school basketball in Akron, Ohio and became
+    a national sensation.
+  </p>
+
+  <div class="content-grid">
+
+    <div class="card">
+      <h3>The Chosen One</h3>
+
+      <p>
+        LeBron earned national attention while leading
+        St. Vincent–St. Mary to multiple championships.
+        His games were televised nationally and sold out arenas.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Achievements</h3>
+
+      <ul>
+        <li>3 State Championships</li>
+        <li>National Player of the Year</li>
+        <li>McDonald's All-American</li>
+        <li>Sports Illustrated Cover Athlete</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Impact</h3>
+
+      <p>
+        LeBron changed high school basketball forever.
+        He entered the NBA with unprecedented hype and expectations.
+      </p>
+    </div>
+
+  </div>
+
+  <button class="back-btn"
+  onclick="showPage('homePage')">
+    ← Back Home
+  </button>
+
+</section>
+
+
+<section id="cavsPage"
+class="page cavs-theme">
+
+  <h1 class="page-title">
+    Cleveland Cavaliers
+  </h1>
+
+  <p class="page-subtitle">
+    LeBron’s hometown journey with the Cavaliers included
+    MVP seasons, Finals appearances, and one of the greatest
+    championships in NBA history.
+  </p>
+
+  <div class="stats">
+
+    <div class="stat-box">
+      <h2>2</h2>
+      <p>MVP Awards</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>1</h2>
+      <p>NBA Championship</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>5</h2>
+      <p>NBA Finals</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>11</h2>
+      <p>Seasons</p>
+    </div>
+
+  </div>
+
+  <div class="content-grid" style="margin-top:50px;">
+
+    <div class="card">
+      <h3>First Era</h3>
+
+      <p>
+        LeBron entered the NBA in 2003 and quickly became
+        the face of the franchise and the league.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Historic Return</h3>
+
+      <p>
+        Returning in 2014, LeBron promised Cleveland a title —
+        and delivered in unforgettable fashion in 2016.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>The Block</h3>
+
+      <p>
+        His chasedown block on Andre Iguodala in Game 7
+        remains one of the most iconic plays in NBA history.
+      </p>
+    </div>
+
+  </div>
+
+  <button class="back-btn"
+  onclick="showPage('homePage')">
+    ← Back Home
+  </button>
+
+</section>
+
+
+<section id="heatPage"
+class="page heat-theme">
+
+  <h1 class="page-title">
+    Miami Heat
+  </h1>
+
+  <p class="page-subtitle">
+    LeBron reached new heights in Miami, becoming a champion,
+    Finals MVP, and one of the most complete players ever.
+  </p>
+
+  <div class="stats">
+
+    <div class="stat-box">
+      <h2>2</h2>
+      <p>NBA Titles</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>4</h2>
+      <p>NBA Finals</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>2</h2>
+      <p>Finals MVPs</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>27</h2>
+      <p>Game Win Streak</p>
+    </div>
+
+  </div>
+
+  <div class="content-grid" style="margin-top:50px;">
+
+    <div class="card">
+      <h3>The Big Three</h3>
+
+      <p>
+        Alongside Dwyane Wade and Chris Bosh,
+        LeBron helped create one of basketball’s
+        greatest superteams.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Championship Runs</h3>
+
+      <p>
+        Miami reached four straight NBA Finals and won
+        championships in 2012 and 2013.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Complete Dominance</h3>
+
+      <p>
+        LeBron improved defensively, developed his post game,
+        and played some of the best basketball of his career.
+      </p>
+    </div>
+
+  </div>
+
+  <button class="back-btn"
+  onclick="showPage('homePage')">
+    ← Back Home
+  </button>
+
+</section>
+
+
+<section id="lakersPage"
+class="page lakers-theme">
+
+  <h1 class="page-title">
+    Los Angeles Lakers
+  </h1>
+
+  <p class="page-subtitle">
+    LeBron continues building his legacy in Los Angeles,
+    winning championships and rewriting NBA history.
+  </p>
+
+  <div class="stats">
+
+    <div class="stat-box">
+      <h2>1</h2>
+      <p>NBA Title</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>#1</h2>
+      <p>All-Time Scorer</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>20+</h2>
+      <p>NBA Seasons</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>40K+</h2>
+      <p>Career Points</p>
+    </div>
+
+  </div>
+
+  <div class="content-grid" style="margin-top:50px;">
+
+    <div class="card">
+      <h3>2020 Championship</h3>
+
+      <p>
+        LeBron led the Lakers to a championship inside
+        the NBA Bubble and earned Finals MVP honors.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Breaking Records</h3>
+
+      <p>
+        He surpassed Kareem Abdul-Jabbar to become
+        the NBA’s all-time leading scorer.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Beyond Basketball</h3>
+
+      <p>
+        LeBron expanded his influence through business,
+        entertainment, and philanthropy initiatives.
+      </p>
+    </div>
+
+  </div>
+
+  <button class="back-btn"
+  onclick="showPage('homePage')">
+    ← Back Home
+  </button>
+
+</section>
+
+<footer>
+  <p>
+     LeBron James Career Website |
+   Michael Shamie
+  </p>
+</footer>
+
+<script>
+
+
+const pages = document.querySelectorAll('.page');
+
+function showPage(pageId){
+
+  pages.forEach(page=>{
+    page.classList.remove('active');
+  });
+
+  document
+    .getElementById(pageId)
+    .classList.add('active');
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+
+}
+
+
+function scrollToTimeline(){
+
+  document.getElementById('timeline')
+  .scrollIntoView({
+    behavior:'smooth'
+  });
+
+}
+
+
+document.addEventListener('keydown', (e)=>{
+
+  if(e.key === '1'){
+    showPage('homePage');
+  }
+
+  if(e.key === '2'){
+    showPage('highschoolPage');
+  }
+
+  if(e.key === '3'){
+    showPage('cavsPage');
+  }
+
+  if(e.key === '4'){
+    showPage('heatPage');
+  }
+
+  if(e.key === '5'){
+    showPage('lakersPage');
+  }
+
+});
+
+
+const navLinks = document.querySelectorAll('.nav-links a');
+
+navLinks.forEach(link=>{
+
+  link.addEventListener('mouseenter', ()=>{
+    link.style.transform = 'translateY(-2px)';
+  });
+
+  link.addEventListener('mouseleave', ()=>{
+    link.style.transform = 'translateY(0px)';
+  });
+
+});
+
+</script>
+
+</body>
 </html>
